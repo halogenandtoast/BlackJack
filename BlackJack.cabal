@@ -1,0 +1,72 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           BlackJack
+version:        0.0.0
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_BlackJack
+  hs-source-dirs:
+      src
+  default-extensions:
+      DerivingStrategies
+      GeneralizedNewtypeDeriving
+      LambdaCase
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      MonadRandom
+    , base >=4.7 && <5
+    , extra
+    , mtl
+    , random-shuffle
+  default-language: Haskell2010
+
+executable BlackJack-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_BlackJack
+  hs-source-dirs:
+      app
+  default-extensions:
+      DerivingStrategies
+      GeneralizedNewtypeDeriving
+      LambdaCase
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      BlackJack
+    , MonadRandom
+    , base >=4.7 && <5
+    , extra
+    , mtl
+    , random-shuffle
+  default-language: Haskell2010
+
+test-suite BlackJack-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_BlackJack
+  hs-source-dirs:
+      test
+  default-extensions:
+      DerivingStrategies
+      GeneralizedNewtypeDeriving
+      LambdaCase
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      BlackJack
+    , MonadRandom
+    , base >=4.7 && <5
+    , extra
+    , mtl
+    , random-shuffle
+  default-language: Haskell2010

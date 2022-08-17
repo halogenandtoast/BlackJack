@@ -1,0 +1,49 @@
+name:                BlackJack
+
+default-extensions:
+- DerivingStrategies
+- GeneralizedNewtypeDeriving
+- LambdaCase
+
+dependencies:
+- base >= 4.7 && < 5
+- random-shuffle
+- MonadRandom
+- mtl
+- extra
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+executables:
+  BlackJack-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - BlackJack
+
+tests:
+  BlackJack-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - BlackJack
