@@ -21,11 +21,13 @@ library
       DerivingStrategies
       GeneralizedNewtypeDeriving
       LambdaCase
+      RankNTypes
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       MonadRandom
     , base >=4.7 && <5
     , extra
+    , lens
     , mtl
     , random-shuffle
   default-language: Haskell2010
@@ -40,12 +42,14 @@ executable BlackJack-exe
       DerivingStrategies
       GeneralizedNewtypeDeriving
       LambdaCase
+      RankNTypes
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       BlackJack
     , MonadRandom
     , base >=4.7 && <5
     , extra
+    , lens
     , mtl
     , random-shuffle
   default-language: Haskell2010
@@ -61,12 +65,14 @@ test-suite BlackJack-test
       DerivingStrategies
       GeneralizedNewtypeDeriving
       LambdaCase
+      RankNTypes
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       BlackJack
     , MonadRandom
     , base >=4.7 && <5
     , extra
+    , lens
     , mtl
     , random-shuffle
   default-language: Haskell2010

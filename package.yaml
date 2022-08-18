@@ -4,6 +4,7 @@ default-extensions:
 - DerivingStrategies
 - GeneralizedNewtypeDeriving
 - LambdaCase
+- RankNTypes
 
 dependencies:
 - base >= 4.7 && < 5
@@ -11,6 +12,7 @@ dependencies:
 - MonadRandom
 - mtl
 - extra
+- lens
 
 ghc-options:
 - -Wall
